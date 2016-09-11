@@ -7,7 +7,7 @@ API yang digunakan untuk pencarian jodoh online secara akurat dan tepat guna
 
 ## Data Diri Saya [/diriku{?id}]
 
-Akan mengambil data diri berdasarkan id masing-masing data
+Akan mengambil data diri berdasarkan id masing-masing profil
 
 
 + Parameters
@@ -60,9 +60,9 @@ Akan mengambil data diri berdasarkan id masing-masing data
 + **password** - (required, string) - Password yang telah didaftarkan
 
 
-Tolong jawab pertanyaan dibawah ini agar kami bisa menemukan jodoh yang cocok dengan anda
+Tolong jawab pertanyaan dibawah ini agar kami bisa menemukan jodoh yang cocok dengan mudah dan presisi
 
-### Input Login [GET]
+### Input Login [POST]
 
 + Request (application/json)
 
@@ -105,11 +105,14 @@ Tolong jawab pertanyaan dibawah ini agar kami bisa menemukan jodoh yang cocok de
                             "choices": [
                             {
                                 "choice": "Bercocok tanam"
-                            }, {
+                            },
+                            {
                                 "choice": "Bobok Imut"
-                            }, {
+                            }, 
+                            {
                                 "choice": "Jalan-jalan"
-                            }, {
+                            }, 
+                            {
                                 "choice": "Maju mundur cantik"
                             }
                             ]
