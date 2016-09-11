@@ -1,0 +1,120 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# CARI JODOH
+
+API yang digunakan untuk pencarian jodoh online secara akurat dan tepat guna
+
+## Data Diri Saya [/diriku{?id}]
+
+Akan mengambil data diri berdasarkan id masing-masing data
+
+
++ Parameters
+    + id : 1
+
+### Get My Profile [GET]
+
++ Request (application/json)
+        
+        {
+            "id":"1"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "Data User":[
+                {
+                    "id"        :"1",
+                    "name"      :"Cahyo Adhi",
+                    "Location"  :"Yogyakarta",
+                    "age"       :"24 years old",
+                    "Status"    :"Single"
+                },
+                {
+                    "id"        :"2",
+                    "name"      :"Bagus",
+                    "Location"  :"Magelang",
+                    "age"       :"22 years old",
+                    "Status"    :"DUREN (Duda Keren)"
+                },
+                {
+                    "id"        :"3",
+                    "name"      :"Dado",
+                    "Location"  :"Semarang",
+                    "age"       :"39 years old",
+                    "Status"    :"Ingin nikah (Urgent)"
+                }
+            ]
+        
+        }
+
+
+
+## Data Login [/loginsaya]
+
+
+**Post Parameter:**
++ **username** - (required, string)  - email yang sudah didaftarkan
++ **password** - (required, string) - Password yang telah didaftarkan
+
+
+Tolong jawab pertanyaan dibawah ini agar kami bisa menemukan jodoh yang cocok dengan anda
+
+### Input Login [GET]
+
++ Request (application/json)
+
+        {
+            "username":"cahyoah"
+            "password":"hahahaha"
+        }
+        
+
+        
++ Response 200 (application/json)
+
+
+    + Body
+
+            {
+                "Pertanyaan" :[
+                    
+                        {
+                            "pertanyaan": "Umur target menikah anda?",
+                            "choices": [
+                            {
+                                "choice": "24"
+                            },
+                            {
+                                "choice": "27"
+                            }, 
+                            {
+                                "choice": "35"
+                            },
+                            {
+                                "choice": "Secepatanya"
+                            }
+                            ]
+                        
+                  
+                        },
+                        {
+                            "question": "Hobi anda?",
+                            "choices": [
+                            {
+                                "choice": "Bercocok tanam"
+                            }, {
+                                "choice": "Bobok Imut"
+                            }, {
+                                "choice": "Jalan-jalan"
+                            }, {
+                                "choice": "Maju mundur cantik"
+                            }
+                            ]
+                        }
+                        
+                                   
+                ]
+            }
